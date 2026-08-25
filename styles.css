@@ -204,72 +204,6 @@ h2 {
   width: 1rem;
 }
 
-.repo-deep-dive {
-  margin-top: 2.5rem;
-}
-
-.repo-deep-dive .section-heading {
-  max-width: 820px;
-}
-
-.repo-deep-dive .section-heading p:last-child {
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-.image-learning-grid {
-  display: grid;
-  gap: 1.2rem;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 1.5rem;
-}
-
-.diagram-card {
-  background: white;
-  border: 1px solid rgba(31, 41, 51, 0.08);
-  border-radius: 1.5rem;
-  box-shadow: 0 16px 36px rgba(73, 47, 28, 0.08);
-  margin: 0;
-  overflow: hidden;
-}
-
-.diagram-card img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
-.diagram-card figcaption {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1rem 1.1rem 1.2rem;
-}
-
-.diagram-card figcaption strong {
-  color: var(--accent-dark);
-}
-
-.diagram-card figcaption span {
-  color: var(--muted);
-}
-
-.repo-notes {
-  background: #1f2933;
-  border-radius: 1.25rem;
-  color: white;
-  margin-top: 1.2rem;
-  padding: 1.4rem 1.6rem;
-}
-
-.repo-notes h4 {
-  font-size: 1.2rem;
-  margin: 0 0 0.5rem;
-}
-
-.repo-notes p {
-  margin-bottom: 0;
-}
-
 .practice-panel {
   display: grid;
   gap: 1.5rem;
@@ -314,7 +248,6 @@ h2 {
 
   .feature-grid,
   .command-grid,
-  .image-learning-grid,
   .practice-panel {
     grid-template-columns: 1fr;
   }

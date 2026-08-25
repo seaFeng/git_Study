@@ -77,48 +77,6 @@
           <p>学习 clone、pull、push、pull request 和冲突解决。</p>
         </li>
       </ol>
-
-      <article class="repo-deep-dive" aria-labelledby="repo-detail-title">
-        <div class="section-heading">
-          <p class="section-tag">重点展开</p>
-          <h3 id="repo-detail-title">理解仓库：先看懂 Git 把文件放在哪里</h3>
-          <p>
-            学 Git 最容易卡住的地方，是分不清“我改了文件”“我暂存了文件”“我提交了文件”分别发生在哪里。
-            下面用多张图把仓库概念拆开：先认识四个区域，再理解文件状态，最后套入日常协作流程。
-          </p>
-        </div>
-
-        <div class="image-learning-grid">
-          <figure class="diagram-card">
-            <img src="assets/git-repository-zones.svg" alt="工作区、暂存区、本地仓库和远程仓库之间通过 add、commit、push、pull 连接的示意图" />
-            <figcaption>
-              <strong>图 1：四个区域</strong>
-              <span>工作区是你正在编辑的文件；暂存区是准备提交的清单；本地仓库保存提交历史；远程仓库用于团队共享。</span>
-            </figcaption>
-          </figure>
-
-          <figure class="diagram-card">
-            <img src="assets/git-file-lifecycle.svg" alt="文件从未跟踪到已暂存再到已提交的状态流转示意图" />
-            <figcaption>
-              <strong>图 2：文件状态</strong>
-              <span>新文件先是未跟踪，运行 <code>git add</code> 后进入暂存区，运行 <code>git commit</code> 后成为提交历史的一部分。</span>
-            </figcaption>
-          </figure>
-
-          <figure class="diagram-card">
-            <img src="assets/git-daily-workflow.svg" alt="Git 日常协作从同步、创建分支、开发、提交到推送评审的流程图" />
-            <figcaption>
-              <strong>图 3：日常流程</strong>
-              <span>真实项目里通常先同步远程代码，再开分支开发，小步提交后推送并发起评审。</span>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="repo-notes">
-          <h4>记忆口诀</h4>
-          <p><strong>改文件在工作区，挑变化进暂存区，存快照进本地仓库，给团队看就推远程。</strong></p>
-        </div>
-      </article>
     </section>
 
     <section id="commands" class="section commands" aria-labelledby="commands-title">
