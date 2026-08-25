@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 文件状态流转图</title>
+  <desc id="desc">文件从未跟踪、已修改、已暂存到已提交的状态变化。</desc>
+  <rect width="900" height="360" rx="28" fill="#1f2933" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="50" text-anchor="middle" font-size="28" font-weight="800" fill="#fffaf2">文件状态怎么变化？</text>
+    <g fill="none" stroke="#f06449" stroke-width="5" stroke-linecap="round">
+      <path d="M145 180 C245 92 338 92 438 180" />
+      <path d="M462 180 C562 268 655 268 755 180" />
+    </g>
+    <g>
+      <circle cx="145" cy="180" r="58" fill="#ffe3d7" />
+      <circle cx="450" cy="180" r="58" fill="#eef8f4" />
+      <circle cx="755" cy="180" r="58" fill="#fff3c4" />
+      <text x="145" y="174" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">未跟踪</text>
+      <text x="145" y="202" text-anchor="middle" font-size="15" fill="#5f6c7b">Untracked</text>
+      <text x="450" y="174" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">已暂存</text>
+      <text x="450" y="202" text-anchor="middle" font-size="15" fill="#5f6c7b">Staged</text>
+      <text x="755" y="174" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">已提交</text>
+      <text x="755" y="202" text-anchor="middle" font-size="15" fill="#5f6c7b">Committed</text>
+    </g>
+    <g font-size="17" font-weight="800" fill="#fffaf2">
+      <text x="298" y="103" text-anchor="middle">git add</text>
+      <text x="602" y="282" text-anchor="middle">git commit</text>
+      <text x="450" y="318" text-anchor="middle" fill="#cbd5e1">提交后继续修改，文件会再次回到“已修改”状态</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git 学习站</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="logo" href="#top" aria-label="Git 学习站首页">Git 学习站</a>
+      <div class="nav-links">
+        <a href="#roadmap">学习路线</a>
+        <a href="#commands">常用命令</a>
+        <a href="#practice">实战练习</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+
+    <section id="top" class="hero-content">
+      <p class="eyebrow">从零开始掌握版本控制</p>
+      <h1>用可视化路线和实战任务学习 Git</h1>
+      <p class="hero-text">
+        这个网站把 Git 的核心概念、日常命令和协作流程整理成循序渐进的学习路径，帮助你快速建立信心并投入项目协作。
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#roadmap">开始学习</a>
+        <a class="button primary outline" href="repository.html">打开新增专题页</a>
+        <a class="button secondary" href="#commands">查看命令速查</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section update-banner" aria-labelledby="update-title">
+      <div>
+        <p class="section-tag">首页新增内容</p>
+        <h2 id="update-title">理解仓库图解专题已经上线</h2>
+        <p>如果你之前没有在首页看到变化，现在可以从这里直接进入新增页面。专题页用多张图详细解释“理解仓库”这一步。</p>
+      </div>
+      <a class="button primary" href="repository.html">查看新增页面</a>
+    </section>
+
+    <section class="section intro" aria-labelledby="why-title">
+      <div>
+        <p class="section-tag">为什么学 Git</p>
+        <h2 id="why-title">Git 是团队协作和个人项目管理的基础工具</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="icon">↩</span>
+          <h3>记录历史</h3>
+          <p>每一次提交都像项目快照，方便回溯、比较和恢复。</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">⑂</span>
+          <h3>安全试验</h3>
+          <p>使用分支开发新功能，不影响主线代码。</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">☍</span>
+          <h3>高效协作</h3>
+          <p>通过 pull request、代码审查和合并流程推动团队交付。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section" aria-labelledby="roadmap-title">
+      <p class="section-tag">学习路线</p>
+      <h2 id="roadmap-title">四步建立 Git 知识地图</h2>
+      <ol class="timeline">
+        <li>
+          <span class="step-number">01</span>
+          <strong>理解仓库</strong>
+          <p>学习工作区、暂存区、本地仓库和远程仓库之间的关系。</p>
+          <a class="inline-link-button" href="repository.html">查看理解仓库专题</a>
+        </li>
+        <li>
+          <span class="step-number">02</span>
+          <strong>掌握提交</strong>
+          <p>使用 add、commit、status、diff 形成小步提交习惯。</p>
+        </li>
+        <li>
+          <span class="step-number">03</span>
+          <strong>练习分支</strong>
+          <p>通过 branch、switch、merge、rebase 管理并行开发。</p>
+        </li>
+        <li>
+          <span class="step-number">04</span>
+          <strong>参与协作</strong>
+          <p>学习 clone、pull、push、pull request 和冲突解决。</p>
+        </li>
+      </ol>
+
+      <article class="repo-deep-dive" aria-labelledby="repo-detail-title">
+        <div class="section-heading">
+          <p class="section-tag">重点展开</p>
+          <h3 id="repo-detail-title">理解仓库：先看懂 Git 把文件放在哪里</h3>
+          <p>
+            学 Git 最容易卡住的地方，是分不清“我改了文件”“我暂存了文件”“我提交了文件”分别发生在哪里。
+            下面用多张图把仓库概念拆开：先认识四个区域，再理解文件状态，最后套入日常协作流程。
+          </p>
+        </div>
+
+        <div class="image-learning-grid">
+          <figure class="diagram-card">
+            <img src="assets/git-repository-zones.svg" alt="工作区、暂存区、本地仓库和远程仓库之间通过 add、commit、push、pull 连接的示意图" />
+            <figcaption>
+              <strong>图 1：四个区域</strong>
+              <span>工作区是你正在编辑的文件；暂存区是准备提交的清单；本地仓库保存提交历史；远程仓库用于团队共享。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-file-lifecycle.svg" alt="文件从未跟踪到已暂存再到已提交的状态流转示意图" />
+            <figcaption>
+              <strong>图 2：文件状态</strong>
+              <span>新文件先是未跟踪，运行 <code>git add</code> 后进入暂存区，运行 <code>git commit</code> 后成为提交历史的一部分。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-daily-workflow.svg" alt="Git 日常协作从同步、创建分支、开发、提交到推送评审的流程图" />
+            <figcaption>
+              <strong>图 3：日常流程</strong>
+              <span>真实项目里通常先同步远程代码，再开分支开发，小步提交后推送并发起评审。</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="repo-notes">
+          <h4>记忆口诀</h4>
+          <p><strong>改文件在工作区，挑变化进暂存区，存快照进本地仓库，给团队看就推远程。</strong></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="commands" class="section commands" aria-labelledby="commands-title">
+      <div class="section-heading">
+        <p class="section-tag">命令速查</p>
+        <h2 id="commands-title">每天都会用到的 Git 命令</h2>
+      </div>
+      <div class="command-grid">
+        <article>
+          <code>git init</code>
+          <p>在当前目录创建新的 Git 仓库。</p>
+        </article>
+        <article>
+          <code>git status</code>
+          <p>查看工作区和暂存区的当前状态。</p>
+        </article>
+        <article>
+          <code>git add .</code>
+          <p>把当前目录的变更加入暂存区。</p>
+        </article>
+        <article>
+          <code>git commit -m "message"</code>
+          <p>把暂存区内容保存为一次提交。</p>
+        </article>
+        <article>
+          <code>git switch -c feature</code>
+          <p>创建并切换到新的功能分支。</p>
+        </article>
+        <article>
+          <code>git log --oneline --graph</code>
+          <p>用紧凑图形方式查看提交历史。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="practice" class="section practice" aria-labelledby="practice-title">
+      <p class="section-tag">实战练习</p>
+      <h2 id="practice-title">跟着任务动手操作</h2>
+      <div class="practice-panel">
+        <div>
+          <h3>30 分钟入门挑战</h3>
+          <ul>
+            <li>创建一个名为 <code>git-demo</code> 的目录并初始化仓库。</li>
+            <li>新增 README，写下今天学到的三个 Git 概念。</li>
+            <li>提交 README，并创建 <code>notes</code> 分支补充学习笔记。</li>
+            <li>把 <code>notes</code> 合并回主分支，观察提交历史。</li>
+          </ul>
+        </div>
+        <aside class="tip-box">
+          <h3>练习提示</h3>
+          <p>遇到不确定的状态先运行 <code>git status</code>。它会告诉你下一步最可能需要做什么。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq" aria-labelledby="faq-title">
+      <p class="section-tag">FAQ</p>
+      <h2 id="faq-title">常见问题</h2>
+      <details open>
+        <summary>提交信息应该怎么写？</summary>
+        <p>用一句话说明“做了什么”和“为什么做”，例如：<code>docs: add git practice checklist</code>。</p>
+      </details>
+      <details>
+        <summary>什么时候应该创建分支？</summary>
+        <p>当你要开发新功能、修复 bug 或尝试方案时，都建议创建独立分支。</p>
+      </details>
+      <details>
+        <summary>合并冲突可怕吗？</summary>
+        <p>不可怕。冲突只是 Git 无法自动判断最终内容，需要你打开文件手动选择保留哪些改动。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>持续练习，小步提交。祝你 Git 学习顺利！</p>
+  </footer>
+</body>
+</html>
