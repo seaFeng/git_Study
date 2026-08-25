@@ -26,12 +26,22 @@
       </p>
       <div class="hero-actions">
         <a class="button primary" href="#roadmap">开始学习</a>
+        <a class="button primary outline" href="repository.html">打开新增专题页</a>
         <a class="button secondary" href="#commands">查看命令速查</a>
       </div>
     </section>
   </header>
 
   <main>
+    <section class="section update-banner" aria-labelledby="update-title">
+      <div>
+        <p class="section-tag">首页新增内容</p>
+        <h2 id="update-title">理解仓库图解专题已经上线</h2>
+        <p>如果你之前没有在首页看到变化，现在可以从这里直接进入新增页面。专题页用多张图详细解释“理解仓库”这一步。</p>
+      </div>
+      <a class="button primary" href="repository.html">查看新增页面</a>
+    </section>
+
     <section class="section intro" aria-labelledby="why-title">
       <div>
         <p class="section-tag">为什么学 Git</p>
@@ -61,22 +71,69 @@
       <h2 id="roadmap-title">四步建立 Git 知识地图</h2>
       <ol class="timeline">
         <li>
+          <span class="step-number">01</span>
           <strong>理解仓库</strong>
           <p>学习工作区、暂存区、本地仓库和远程仓库之间的关系。</p>
+          <a class="inline-link-button" href="repository.html">查看理解仓库专题</a>
         </li>
         <li>
+          <span class="step-number">02</span>
           <strong>掌握提交</strong>
           <p>使用 add、commit、status、diff 形成小步提交习惯。</p>
         </li>
         <li>
+          <span class="step-number">03</span>
           <strong>练习分支</strong>
           <p>通过 branch、switch、merge、rebase 管理并行开发。</p>
         </li>
         <li>
+          <span class="step-number">04</span>
           <strong>参与协作</strong>
           <p>学习 clone、pull、push、pull request 和冲突解决。</p>
         </li>
       </ol>
+
+      <article class="repo-deep-dive" aria-labelledby="repo-detail-title">
+        <div class="section-heading">
+          <p class="section-tag">重点展开</p>
+          <h3 id="repo-detail-title">理解仓库：先看懂 Git 把文件放在哪里</h3>
+          <p>
+            学 Git 最容易卡住的地方，是分不清“我改了文件”“我暂存了文件”“我提交了文件”分别发生在哪里。
+            下面用多张图把仓库概念拆开：先认识四个区域，再理解文件状态，最后套入日常协作流程。
+          </p>
+        </div>
+
+        <div class="image-learning-grid">
+          <figure class="diagram-card">
+            <img src="assets/git-repository-zones.svg" alt="工作区、暂存区、本地仓库和远程仓库之间通过 add、commit、push、pull 连接的示意图" />
+            <figcaption>
+              <strong>图 1：四个区域</strong>
+              <span>工作区是你正在编辑的文件；暂存区是准备提交的清单；本地仓库保存提交历史；远程仓库用于团队共享。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-file-lifecycle.svg" alt="文件从未跟踪到已暂存再到已提交的状态流转示意图" />
+            <figcaption>
+              <strong>图 2：文件状态</strong>
+              <span>新文件先是未跟踪，运行 <code>git add</code> 后进入暂存区，运行 <code>git commit</code> 后成为提交历史的一部分。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-daily-workflow.svg" alt="Git 日常协作从同步、创建分支、开发、提交到推送评审的流程图" />
+            <figcaption>
+              <strong>图 3：日常流程</strong>
+              <span>真实项目里通常先同步远程代码，再开分支开发，小步提交后推送并发起评审。</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="repo-notes">
+          <h4>记忆口诀</h4>
+          <p><strong>改文件在工作区，挑变化进暂存区，存快照进本地仓库，给团队看就推远程。</strong></p>
+        </div>
+      </article>
     </section>
 
     <section id="commands" class="section commands" aria-labelledby="commands-title">
