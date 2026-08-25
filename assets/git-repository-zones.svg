@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 四个区域关系图</title>
+  <desc id="desc">工作区、暂存区、本地仓库和远程仓库的关系。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#bd3d2b" />
+    </marker>
+  </defs>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">理解仓库：Git 的四个区域</text>
+    <g transform="translate(52 98)">
+      <rect width="170" height="150" rx="22" fill="#ffe3d7" stroke="#f06449" stroke-width="3" />
+      <text x="85" y="58" text-anchor="middle" font-size="24" font-weight="800" fill="#1f2933">工作区</text>
+      <text x="85" y="96" text-anchor="middle" font-size="16" fill="#5f6c7b">正在编辑的文件</text>
+    </g>
+    <g transform="translate(272 98)">
+      <rect width="170" height="150" rx="22" fill="#eef8f4" stroke="#2f9e7e" stroke-width="3" />
+      <text x="85" y="58" text-anchor="middle" font-size="24" font-weight="800" fill="#1f2933">暂存区</text>
+      <text x="85" y="96" text-anchor="middle" font-size="16" fill="#5f6c7b">准备提交的变更</text>
+    </g>
+    <g transform="translate(492 98)">
+      <rect width="170" height="150" rx="22" fill="#fff3c4" stroke="#d69e2e" stroke-width="3" />
+      <text x="85" y="58" text-anchor="middle" font-size="24" font-weight="800" fill="#1f2933">本地仓库</text>
+      <text x="85" y="96" text-anchor="middle" font-size="16" fill="#5f6c7b">你的提交历史</text>
+    </g>
+    <g transform="translate(712 98)">
+      <rect width="136" height="150" rx="22" fill="#edf2ff" stroke="#5570d9" stroke-width="3" />
+      <text x="68" y="58" text-anchor="middle" font-size="24" font-weight="800" fill="#1f2933">远程仓库</text>
+      <text x="68" y="96" text-anchor="middle" font-size="16" fill="#5f6c7b">团队共享版本</text>
+    </g>
+    <g stroke="#bd3d2b" stroke-width="4" marker-end="url(#arrow)" fill="none">
+      <path d="M225 173 H268" />
+      <path d="M445 173 H488" />
+      <path d="M665 173 H708" />
+    </g>
+    <g font-size="16" font-weight="700" fill="#bd3d2b">
+      <text x="246" y="148" text-anchor="middle">git add</text>
+      <text x="466" y="148" text-anchor="middle">git commit</text>
+      <text x="687" y="148" text-anchor="middle">git push</text>
+      <text x="784" y="292" text-anchor="middle" fill="#5570d9">git pull / clone 会把远程内容带回本地</text>
+    </g>
+  </g>
+</svg>
