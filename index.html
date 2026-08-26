@@ -134,6 +134,52 @@
           <p><strong>改文件在工作区，挑变化进暂存区，存快照进本地仓库，给团队看就推远程。</strong></p>
         </div>
       </article>
+
+      <article class="commit-deep-dive" aria-labelledby="commit-detail-title">
+        <div class="section-heading">
+          <p class="section-tag">重点展开</p>
+          <h3 id="commit-detail-title">掌握提交：把每一次修改变成清晰快照</h3>
+          <p>
+            提交是 Git 的核心动作。一个好的提交应该范围小、目的明确、信息清楚，方便以后回退、审查和追踪问题。
+            下面用多张图讲清楚从检查变更到写提交信息的完整过程。
+          </p>
+        </div>
+
+        <div class="image-learning-grid">
+          <figure class="diagram-card">
+            <img src="assets/git-commit-flow.svg" alt="Git 提交流程从 status、diff、add 到 commit 的示意图" />
+            <figcaption>
+              <strong>图 1：提交流程</strong>
+              <span>先用 <code>git status</code> 看状态，再用 <code>git diff</code> 看差异，确认后 add，最后 commit。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-commit-anatomy.svg" alt="Git 提交包含提交编号、作者时间、提交信息和文件快照的结构图" />
+            <figcaption>
+              <strong>图 2：提交结构</strong>
+              <span>每个 commit 都包含唯一编号、作者、时间、提交信息，以及这次提交对应的项目快照。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="diagram-card">
+            <img src="assets/git-commit-history.svg" alt="多个小步 Git 提交串联成清晰项目历史的示意图" />
+            <figcaption>
+              <strong>图 3：提交历史</strong>
+              <span>小步提交会把项目历史变成一条清晰线索，方便定位问题，也方便团队评审。</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="commit-checklist">
+          <h4>好提交检查清单</h4>
+          <ul>
+            <li>一次提交只解决一个主题，不把无关修改混在一起。</li>
+            <li>提交前先运行 <code>git diff --staged</code>，确认暂存内容正确。</li>
+            <li>提交信息用动词开头，说明这次修改带来的结果。</li>
+          </ul>
+        </div>
+      </article>
     </section>
 
     <section id="commands" class="section commands" aria-labelledby="commands-title">

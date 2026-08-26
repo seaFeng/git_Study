@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 提交流程图</title>
+  <desc id="desc">从查看状态、比较差异、暂存变更到创建提交的流程。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">掌握提交：一次好提交的流程</text>
+    <g transform="translate(70 120)">
+      <rect width="150" height="100" rx="20" fill="#edf2ff" />
+      <text x="75" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">查看状态</text>
+      <text x="75" y="70" text-anchor="middle" font-size="15" fill="#5f6c7b">git status</text>
+    </g>
+    <g transform="translate(270 120)">
+      <rect width="150" height="100" rx="20" fill="#ffe3d7" />
+      <text x="75" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">比较差异</text>
+      <text x="75" y="70" text-anchor="middle" font-size="15" fill="#5f6c7b">git diff</text>
+    </g>
+    <g transform="translate(470 120)">
+      <rect width="150" height="100" rx="20" fill="#eef8f4" />
+      <text x="75" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">暂存变更</text>
+      <text x="75" y="70" text-anchor="middle" font-size="15" fill="#5f6c7b">git add</text>
+    </g>
+    <g transform="translate(670 120)">
+      <rect width="150" height="100" rx="20" fill="#fff3c4" />
+      <text x="75" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">创建提交</text>
+      <text x="75" y="70" text-anchor="middle" font-size="15" fill="#5f6c7b">git commit</text>
+    </g>
+    <g stroke="#bd3d2b" stroke-width="4" stroke-linecap="round">
+      <path d="M226 170 H264" />
+      <path d="M426 170 H464" />
+      <path d="M626 170 H664" />
+    </g>
+    <text x="450" y="292" text-anchor="middle" font-size="18" font-weight="700" fill="#5f6c7b">口诀：先看状态，再看差异，只暂存相关变更，最后写清楚提交信息。</text>
+  </g>
+</svg>

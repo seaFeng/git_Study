@@ -309,15 +309,18 @@ h2 {
   background: var(--accent-dark);
 }
 
-.repo-deep-dive {
+.repo-deep-dive,
+.commit-deep-dive {
   margin-top: 2.5rem;
 }
 
-.repo-deep-dive .section-heading {
+.repo-deep-dive .section-heading,
+.commit-deep-dive .section-heading {
   max-width: 820px;
 }
 
-.repo-deep-dive .section-heading p:last-child {
+.repo-deep-dive .section-heading p:last-child,
+.commit-deep-dive .section-heading p:last-child {
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -373,6 +376,29 @@ h2 {
 
 .repo-notes p {
   margin-bottom: 0;
+}
+
+.commit-checklist {
+  background: white;
+  border-left: 6px solid var(--green);
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 36px rgba(73, 47, 28, 0.08);
+  margin-top: 1.2rem;
+  padding: 1.4rem 1.6rem;
+}
+
+.commit-checklist h4 {
+  font-size: 1.2rem;
+  margin: 0 0 0.6rem;
+}
+
+.commit-checklist ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.commit-checklist li + li {
+  margin-top: 0.55rem;
 }
 
 .wide-diagram,

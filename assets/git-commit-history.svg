@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 提交历史图</title>
+  <desc id="desc">小步提交如何形成清晰的项目历史。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">小步提交会形成清晰历史</text>
+    <line x1="130" y1="170" x2="770" y2="170" stroke="#f06449" stroke-width="6" stroke-linecap="round" />
+    <g>
+      <circle cx="150" cy="170" r="34" fill="#ffe3d7" stroke="#bd3d2b" stroke-width="4" />
+      <circle cx="310" cy="170" r="34" fill="#eef8f4" stroke="#2f9e7e" stroke-width="4" />
+      <circle cx="470" cy="170" r="34" fill="#fff3c4" stroke="#d69e2e" stroke-width="4" />
+      <circle cx="630" cy="170" r="34" fill="#edf2ff" stroke="#5570d9" stroke-width="4" />
+      <circle cx="770" cy="170" r="34" fill="#fce7f3" stroke="#be4b8b" stroke-width="4" />
+    </g>
+    <g font-size="16" font-weight="800" fill="#1f2933" text-anchor="middle">
+      <text x="150" y="246">初始化</text>
+      <text x="310" y="110">添加页面</text>
+      <text x="470" y="246">补充样式</text>
+      <text x="630" y="110">修复链接</text>
+      <text x="770" y="246">完善文档</text>
+    </g>
+    <text x="450" y="310" text-anchor="middle" font-size="17" font-weight="700" fill="#5f6c7b">每个点都是一个可回退、可审查、可解释的 commit。</text>
+  </g>
+</svg>
