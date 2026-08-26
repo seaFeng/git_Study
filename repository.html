@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>理解仓库图解专题 - Git 学习站</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="logo" href="index.html">Git 学习站</a>
+      <div class="nav-links">
+        <a href="index.html#roadmap">学习路线</a>
+        <a href="index.html#commands">常用命令</a>
+        <a href="repository.html" aria-current="page">理解仓库专题</a>
+      </div>
+    </nav>
+    <div class="sub-hero-content">
+      <p class="eyebrow">新增页面</p>
+      <h1>理解仓库图解专题</h1>
+      <p class="hero-text">用 4 张图把工作区、暂存区、本地仓库、远程仓库和常见文件状态一次讲清楚。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section commands" aria-labelledby="map-title">
+      <p class="section-tag">第一步</p>
+      <h2 id="map-title">先建立整体地图</h2>
+      <div class="wide-diagram">
+        <img src="assets/git-repository-zones.svg" alt="Git 工作区、暂存区、本地仓库和远程仓库关系图" />
+      </div>
+      <p class="large-note">把 Git 想成一个“快照管理系统”：你先在工作区改文件，再把想保存的变化放进暂存区，最后提交到本地仓库；需要协作时再推送到远程仓库。</p>
+    </section>
+
+    <section class="section" aria-labelledby="zones-title">
+      <p class="section-tag">第二步</p>
+      <h2 id="zones-title">四个区域分别负责什么？</h2>
+      <div class="zone-grid">
+        <article>
+          <span>01</span>
+          <h3>工作区</h3>
+          <p>你能在编辑器里直接看到和修改的项目文件。这里的变化还没有被 Git 正式保存。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>暂存区</h3>
+          <p>一次提交的候选清单。运行 <code>git add</code> 就是在挑选哪些变化要进入下一次提交。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>本地仓库</h3>
+          <p>保存在你电脑里的提交历史。运行 <code>git commit</code> 后，暂存区内容会变成一个可回溯的快照。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>远程仓库</h3>
+          <p>托管在 GitHub、GitLab 等平台上的共享仓库。运行 <code>git push</code> 后，团队成员才能看到你的提交。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="states-title">
+      <p class="section-tag">第三步</p>
+      <h2 id="states-title">再看文件状态如何流转</h2>
+      <div class="story-row">
+        <img src="assets/git-file-lifecycle.svg" alt="Git 文件状态从未跟踪到已暂存再到已提交的流转图" />
+        <div>
+          <h3>读懂 <code>git status</code> 的关键</h3>
+          <p>当 Git 提示 untracked、modified、staged 时，它是在告诉你文件处于哪个阶段。养成频繁运行 <code>git status</code> 的习惯，可以避免误提交和漏提交。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="workflow-title">
+      <p class="section-tag">第四步</p>
+      <h2 id="workflow-title">把仓库概念放回真实协作</h2>
+      <div class="story-row reverse">
+        <img src="assets/git-daily-workflow.svg" alt="Git 日常协作工作流图" />
+        <div>
+          <h3>推荐工作节奏</h3>
+          <p>每天开始先同步远程代码；新任务创建独立分支；开发过程中小步提交；完成后推送分支并发起代码评审。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section practice" aria-labelledby="checklist-title">
+      <p class="section-tag">练习清单</p>
+      <h2 id="checklist-title">跟着做一次就能记住</h2>
+      <div class="practice-panel">
+        <div>
+          <h3>仓库理解练习</h3>
+          <ul>
+            <li>运行 <code>git status</code>，观察当前分支和文件状态。</li>
+            <li>新建一个文件，先不要 add，再运行一次 <code>git status</code>。</li>
+            <li>运行 <code>git add 文件名</code>，观察它如何进入暂存区。</li>
+            <li>运行 <code>git commit -m "practice repository zones"</code>，确认变更进入本地仓库。</li>
+          </ul>
+        </div>
+        <aside class="tip-box">
+          <h3>一句话总结</h3>
+          <p>工作区负责“改”，暂存区负责“选”，本地仓库负责“存”，远程仓库负责“共享”。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="index.html">返回首页</a> · 持续练习，小步提交。</p>
+  </footer>
+</body>
+</html>
