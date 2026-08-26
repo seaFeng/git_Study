@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 提交结构图</title>
+  <desc id="desc">一个 Git 提交包含编号、作者、时间、说明和文件快照。</desc>
+  <rect width="900" height="360" rx="28" fill="#1f2933" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="50" text-anchor="middle" font-size="28" font-weight="800" fill="#fffaf2">一个 commit 里面有什么？</text>
+    <rect x="170" y="92" width="560" height="210" rx="24" fill="#fffaf2" />
+    <rect x="205" y="125" width="180" height="56" rx="14" fill="#ffe3d7" />
+    <text x="295" y="159" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">Commit ID</text>
+    <rect x="415" y="125" width="280" height="56" rx="14" fill="#eef8f4" />
+    <text x="555" y="159" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">作者 + 时间</text>
+    <rect x="205" y="205" width="220" height="56" rx="14" fill="#fff3c4" />
+    <text x="315" y="239" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">提交信息</text>
+    <rect x="455" y="205" width="240" height="56" rx="14" fill="#edf2ff" />
+    <text x="575" y="239" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">文件快照</text>
+    <text x="450" y="326" text-anchor="middle" font-size="17" font-weight="700" fill="#cbd5e1">提交不是“保存差异”这么简单，而是记录一次可追踪的项目快照。</text>
+  </g>
+</svg>

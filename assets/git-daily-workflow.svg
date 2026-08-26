@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Git 日常工作流图</title>
+  <desc id="desc">先同步、创建分支、提交，再推送并发起评审。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">日常协作：从同步到评审</text>
+    <g transform="translate(62 115)">
+      <rect width="130" height="95" rx="20" fill="#edf2ff" />
+      <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">同步</text>
+      <text x="65" y="70" text-anchor="middle" font-size="14" fill="#5f6c7b">git pull</text>
+    </g>
+    <g transform="translate(222 115)">
+      <rect width="130" height="95" rx="20" fill="#ffe3d7" />
+      <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">分支</text>
+      <text x="65" y="70" text-anchor="middle" font-size="14" fill="#5f6c7b">switch -c</text>
+    </g>
+    <g transform="translate(382 115)">
+      <rect width="130" height="95" rx="20" fill="#eef8f4" />
+      <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">开发</text>
+      <text x="65" y="70" text-anchor="middle" font-size="14" fill="#5f6c7b">edit files</text>
+    </g>
+    <g transform="translate(542 115)">
+      <rect width="130" height="95" rx="20" fill="#fff3c4" />
+      <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">提交</text>
+      <text x="65" y="70" text-anchor="middle" font-size="14" fill="#5f6c7b">add + commit</text>
+    </g>
+    <g transform="translate(702 115)">
+      <rect width="130" height="95" rx="20" fill="#fce7f3" />
+      <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">评审</text>
+      <text x="65" y="70" text-anchor="middle" font-size="14" fill="#5f6c7b">push + PR</text>
+    </g>
+    <g stroke="#bd3d2b" stroke-width="4" stroke-linecap="round">
+      <path d="M198 162 H216" />
+      <path d="M358 162 H376" />
+      <path d="M518 162 H536" />
+      <path d="M678 162 H696" />
+    </g>
+    <text x="450" y="280" text-anchor="middle" font-size="18" font-weight="700" fill="#5f6c7b">一个好习惯：每次开始工作先同步，每次完成一小块就提交。</text>
+  </g>
+</svg>
