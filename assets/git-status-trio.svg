@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git status 的三类状态</title>
+  <desc id="desc">未跟踪、未暂存、已暂存三类文件状态，以及各自下一步命令。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">git status 只关心三类状态</text>
+    <text x="450" y="80" text-anchor="middle" font-size="16" fill="#5f6c7b">它会把每个文件归到其中一类，并提示你下一步</text>
+
+    <rect x="44" y="120" width="246" height="150" rx="20" fill="#ffe3d7" />
+    <text x="167" y="154" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">未跟踪</text>
+    <text x="167" y="178" text-anchor="middle" font-size="15" fill="#5f6c7b">Untracked</text>
+    <text x="167" y="222" text-anchor="middle" font-size="15" fill="#1f2933">新文件，还没被 Git 记录</text>
+    <rect x="64" y="236" width="206" height="24" rx="12" fill="#ffffff" />
+    <text x="167" y="253" text-anchor="middle" font-size="13" font-weight="700" fill="#bd3d2b">下一步：git add</text>
+
+    <rect x="327" y="120" width="246" height="150" rx="20" fill="#edf2ff" />
+    <text x="450" y="154" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">未暂存</text>
+    <text x="450" y="178" text-anchor="middle" font-size="15" fill="#5f6c7b">Modified</text>
+    <text x="450" y="222" text-anchor="middle" font-size="15" fill="#1f2933">熟悉文件刚被改动</text>
+    <rect x="347" y="236" width="206" height="24" rx="12" fill="#ffffff" />
+    <text x="450" y="253" text-anchor="middle" font-size="13" font-weight="700" fill="#bd3d2b">下一步：git add 或丢弃</text>
+
+    <rect x="610" y="120" width="246" height="150" rx="20" fill="#eef8f4" />
+    <text x="733" y="154" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">已暂存</text>
+    <text x="733" y="178" text-anchor="middle" font-size="15" fill="#5f6c7b">Staged</text>
+    <text x="733" y="222" text-anchor="middle" font-size="15" fill="#1f2933">改动已选中，等待提交</text>
+    <rect x="630" y="236" width="206" height="24" rx="12" fill="#ffffff" />
+    <text x="733" y="253" text-anchor="middle" font-size="13" font-weight="700" fill="#2f9e7e">下一步：git commit</text>
+
+    <text x="450" y="322" text-anchor="middle" font-size="17" font-weight="700" fill="#5f6c7b">用 status 回答：“我的文件现在都在哪一步？”</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">创建与切换分支</title>
+  <desc id="desc">git branch 列出分支，git switch 切换，HEAD 指向当前所在分支。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">创建和切换：HEAD 会跟着你走到哪条分支上</text>
+
+    <g stroke="#2f9e7e" stroke-width="5" stroke-linecap="round">
+      <path d="M110 216 H400" />
+    </g>
+    <g fill="#eef8f4" stroke="#2f9e7e" stroke-width="4">
+      <circle cx="130" cy="216" r="20" />
+      <circle cx="250" cy="216" r="20" />
+      <circle cx="400" cy="216" r="20" />
+    </g>
+    <text x="180" y="262" text-anchor="middle" font-size="14" font-weight="800" fill="#1f2933">main 主分支</text>
+
+    <path d="M250 216 C 250 140, 360 136, 380 136" fill="none" stroke="#5570d9" stroke-width="5" stroke-linecap="round" />
+    <g fill="#edf2ff" stroke="#5570d9" stroke-width="4">
+      <circle cx="380" cy="136" r="20" />
+      <circle cx="410" cy="136" r="20" />
+    </g>
+    <text x="395" y="186" text-anchor="middle" font-size="14" font-weight="800" fill="#1f2933">feature</text>
+
+    <rect x="285" y="26" width="160" height="34" rx="17" fill="#bd3d2b" />
+    <text x="365" y="49" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">★ HEAD（feature）</text>
+    <line x1="400" y1="62" x2="400" y2="112" stroke="#bd3d2b" stroke-width="4" stroke-linecap="round" marker-end="url(#headA)" />
+
+    <g>
+      <rect x="490" y="146" width="360" height="62" rx="16" fill="#edf2ff" />
+      <text x="514" y="170" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">git branch</text>
+      <text x="514" y="194" font-size="14" fill="#5f6c7b">看看有哪些分支，* 表示当前所在</text>
+      <rect x="490" y="222" width="360" height="62" rx="16" fill="#fff3c4" />
+      <text x="514" y="246" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">git switch -c bug</text>
+      <text x="514" y="270" font-size="14" fill="#5f6c7b">创建 bug 分支，并切换过去</text>
+      <rect x="490" y="298" width="360" height="62" rx="16" fill="#eef8f4" />
+      <text x="514" y="322" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">git switch main</text>
+      <text x="514" y="346" font-size="14" fill="#5f6c7b">做完切回主分支</text>
+    </g>
+
+    <defs>
+      <marker id="headA" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#bd3d2b" />
+      </marker>
+    </defs>
+  </g>
+</svg>

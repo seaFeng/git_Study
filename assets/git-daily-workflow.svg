@@ -3,7 +3,7 @@
   <desc id="desc">先同步、创建分支、提交，再推送并发起评审。</desc>
   <rect width="900" height="360" rx="28" fill="#fffaf2" />
   <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">日常协作：从同步到评审</text>
+    <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">日常协作：从同步到评审</text>
     <g transform="translate(62 115)">
       <rect width="130" height="95" rx="20" fill="#edf2ff" />
       <text x="65" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#1f2933">同步</text>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git clone 复制远程仓库到本地</title>
+  <desc id="desc">第一次参与时用 git clone 拿到全部代码和历史，并自动记住远程名叫 origin。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">第一次参与项目：git clone 完整复制下来</text>
+
+    <rect x="60" y="120" width="300" height="190" rx="20" fill="#eef8f4" />
+    <text x="210" y="150" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">你的电脑（第一次）</text>
+    <text x="210" y="196" text-anchor="middle" font-size="15" fill="#1f2933">拿到全部代码文件</text>
+    <text x="210" y="226" text-anchor="middle" font-size="15" fill="#1f2933">拿到完整的提交历史</text>
+    <text x="210" y="256" text-anchor="middle" font-size="15" fill="#5f6c7b">自动把远程记住为 origin</text>
+    <text x="210" y="286" text-anchor="middle" font-size="14" fill="#2f9e7e">接下来就能直接开发</text>
+
+    <g stroke="#2f9e7e" stroke-width="5" stroke-linecap="round">
+      <path d="M90 170 C 140 170, 160 170, 170 170" />
+      <circle cx="200" cy="170" r="10" fill="#eef8f4" stroke="#2f9e7e" stroke-width="3" />
+      <circle cx="240" cy="170" r="10" fill="#eef8f4" stroke="#2f9e7e" stroke-width="3" />
+    </g>
+
+    <g stroke="#bd3d2b" stroke-width="5" stroke-linecap="round">
+      <line x1="390" y1="200" x2="480" y2="200" marker-end="url(#cloneA)" />
+    </g>
+    <text x="435" y="180" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="17" font-weight="800" fill="#bd3d2b">git clone</text>
+
+    <rect x="520" y="120" width="320" height="190" rx="20" fill="#edf2ff" />
+    <text x="680" y="150" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">远程仓库 origin</text>
+    <g stroke="#5570d9" stroke-width="5" stroke-linecap="round">
+      <path d="M600 200 H760" />
+    </g>
+    <g fill="#edf2ff" stroke="#5570d9" stroke-width="4">
+      <circle cx="630" cy="200" r="16" />
+      <circle cx="682" cy="200" r="16" />
+      <circle cx="734" cy="200" r="16" />
+    </g>
+    <text x="680" y="252" text-anchor="middle" font-size="15" fill="#5f6c7b">云端已有的全部内容</text>
+    <text x="680" y="280" text-anchor="middle" font-size="14" fill="#5f6c7b">团队共享的那一份</text>
+
+    <defs>
+      <marker id="cloneA" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#bd3d2b" />
+      </marker>
+    </defs>
+  </g>
+</svg>

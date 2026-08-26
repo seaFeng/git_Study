@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">提交信息模板拆解</title>
+  <desc id="desc">type 冒号 简短说明：feat: add commit guide page</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">一行提交信息就够看懂：类型 + 冒号 + 说明</text>
+
+    <rect x="130" y="120" width="150" height="70" rx="18" fill="#ffe3d7" />
+    <text x="205" y="165" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="24" font-weight="800" fill="#1f2933">feat</text>
+
+    <text x="360" y="165" text-anchor="middle" font-size="24" font-weight="800" fill="#bd3d2b">:</text>
+
+    <rect x="390" y="120" width="380" height="70" rx="18" fill="#eef8f4" />
+    <text x="580" y="165" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="22" font-weight="800" fill="#1f2933">add commit guide page</text>
+
+    <text x="205" y="234" text-anchor="middle" font-size="16" font-weight="700" fill="#5f6c7b">type：这次做了什么类型</text>
+    <text x="580" y="234" text-anchor="middle" font-size="16" font-weight="700" fill="#5f6c7b">说明：用祈使句说清做了什么</text>
+
+    <text x="450" y="284" text-anchor="middle" font-size="15" fill="#5f6c7b">常见 type：</text>
+    <g text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">
+      <rect x="60" y="296" width="104" height="28" rx="14" fill="#fff3c4" /><text x="112" y="315">feat 新功能</text>
+      <rect x="178" y="296" width="80" height="28" rx="14" fill="#ffe3d7" /><text x="218" y="315">fix 修复</text>
+      <rect x="272" y="296" width="92" height="28" rx="14" fill="#edf2ff" /><text x="318" y="315">docs 文档</text>
+      <rect x="378" y="296" width="96" height="28" rx="14" fill="#fce7f3" /><text x="426" y="315">style 样式</text>
+      <rect x="488" y="296" width="118" height="28" rx="14" fill="#eef8f4" /><text x="547" y="315">refactor 重构</text>
+      <rect x="620" y="296" width="120" height="28" rx="14" fill="#edf2ff" /><text x="680" y="315">chore 杂务</text>
+    </g>
+    <text x="450" y="344" text-anchor="middle" font-size="16" font-weight="700" fill="#bd3d2b">避免：只写 update / change / fix，过几天就看不懂。</text>
+  </g>
+</svg>

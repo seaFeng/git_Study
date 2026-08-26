@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>练习分支专题 - Git 学习站</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="logo" href="index.html">Git 学习站</a>
+      <div class="nav-links">
+        <a href="index.html#roadmap">学习路线</a>
+        <a href="repository.html">理解仓库专题</a>
+        <a href="commit.html">掌握提交专题</a>
+        <a href="branch.html" aria-current="page">练习分支专题</a>
+        <a href="collaboration.html">参与协作专题</a>
+      </div>
+    </nav>
+    <div class="sub-hero-content">
+      <p class="eyebrow">新增页面</p>
+      <h1>练习分支专题</h1>
+      <p class="hero-text">主线保持稳定，新功能在支线上放胆尝试。用多张图和小练习，学会 branch、switch、merge 和解决冲突。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section commands" aria-labelledby="branch-map-title">
+      <p class="section-tag">先建立概念</p>
+      <h2 id="branch-map-title">分支是给自己的“试验田”，主线永远安全</h2>
+      <div class="wide-diagram">
+        <img src="assets/git-branch-basics.svg" alt="主分支保持稳定，多条功能分支并行推进的示意图" />
+      </div>
+      <p class="large-note">分支的完整旅程只有四步：创建、切换、合并、删除。这一页带着你把这套“循环”走顺，之后参与协作就会轻松很多。</p>
+    </section>
+
+    <section class="section" aria-labelledby="branch-steps-title">
+      <p class="section-tag">页面地图</p>
+      <h2 id="branch-steps-title">分支的一生就是这四步</h2>
+      <div class="lesson-grid">
+        <article>
+          <span class="step-number">01</span>
+          <h3>看分支：当前在哪？</h3>
+          <p><code>git branch</code> 列出所有分支，<code>*</code> 标记你正所在的分支。</p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <h3>切分支：去做改动</h3>
+          <p><code>git switch -c</code> 创建并切换，改动都留在新分支里。</p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <h3>合回去：接回主线</h3>
+          <p>回到目标分支，用 <code>git merge</code> 把改动接回来。</p>
+        </article>
+        <article>
+          <span class="step-number">04</span>
+          <h3>删分支：保持干净</h3>
+          <p>合并完用 <code>git branch -d</code> 清理临时的功能分支。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="switch-title">
+      <p class="section-tag">第 1 步 · 创建与切换</p>
+      <h2 id="switch-title">HEAD 会跟着你走到哪条分支上</h2>
+      <div class="story-row">
+        <img src="assets/git-branch-switch.svg" alt="git branch 列出分支，git switch 切换，HEAD 指向当前分支" />
+        <div>
+          <h3>switch 只移动你的“当前位置”</h3>
+          <p><code>git branch</code> 帮你确认“你现在在哪个分支”。<code>git switch -c 名字</code> 会新建分支并立刻切过去。</p>
+          <p>创建分支那一刻，新分支会从当前所在位置起步。之后你在它上面的每一次提交，主分支都看不到，互不影响。</p>
+          <p><strong>记住：</strong>切换之前，先把当前分支的改动提交或处理好，避免改动带错地方。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="merge-title">
+      <p class="section-tag">第 2 步 · 合并</p>
+      <h2 id="merge-title">merge 是把分支上写的提交接回当前分支</h2>
+      <div class="story-row reverse">
+        <img src="assets/git-branch-merge.svg" alt="回到目标分支后用 git merge 把功能分支的提交接回来" />
+        <div>
+          <h3>先回目标分支，再执行 merge</h3>
+          <p>合并不是“推出去”，而是“拉回来”：先 <code>git switch main</code> 回到要接收改动的主分支，再 <code>git merge feature</code>。</p>
+          <p>大多数合并都由 Git 自动完成，既安全又平常。它会把 feature 上的提交接到 main 上，历史连成一条更完整的线。</p>
+          <p><strong>小提醒：</strong>如果两边只改了不同文件，Git 会在后台安静完成，你几乎感觉不到。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="conflict-title">
+      <p class="section-tag">第 3 步 · 冲突</p>
+      <h2 id="conflict-title">冲突不是错误，只是需要你来拍板</h2>
+      <div class="story-row">
+        <img src="assets/git-branch-conflict.svg" alt="两边改了同一处产生冲突标记，手动选择保留后再次提交" />
+        <div>
+          <h3>只在两边改到“同一处”时才会出现</h3>
+          <p>当 main 和 feature 都改了同一行或同一段，Git 不知道该留哪边，就在文件里加上 <code>&lt;&lt;&lt; &gt;&gt;&gt;</code> 标记，并提示你处理。</p>
+          <p>你只需要打开文件，保留想要的内容，删掉多余的标记行，再 <code>git add</code> 并 <code>git commit</code> 即可。</p>
+          <p><strong>放宽心：</strong>冲突最多是“选择”，不是“灾难”。实在拿不准，去找写这段代码的同事一起看。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="cleanup-title">
+      <p class="section-tag">第 4 步 · 清理</p>
+      <h2 id="cleanup-title">功能合完后，记得删掉临时分支</h2>
+      <div class="story-row reverse">
+        <img src="assets/git-branch-cleanup.svg" alt="功能合并后用 git branch -d 删除临时分支，保持列表干净" />
+        <div>
+          <h3>删除的是分支名，不是提交历史</h3>
+          <p>功能合并完成后，用 <code>git branch -d feature</code> 删除临时分支，分支列表立刻清爽。</p>
+          <p><code>-d</code> 只允许删除“已经合并”的分支，这是安全护栏。<code>-D</code> 才可以强删未合并的分支，但一般用不到，也不建议乱用。</p>
+          <p><strong>注意：</strong>只要提交还在，删除分支不会丢历史。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section practice" aria-labelledby="practice-title">
+      <p class="section-tag">动手练习</p>
+      <h2 id="practice-title">15 分钟练会分支的完整循环</h2>
+      <div class="practice-panel">
+        <div>
+          <h3>练习任务</h3>
+          <ul>
+            <li>在 <code>git-demo</code> 仓库里运行 <code>git branch</code>，确认当前只有 main，且带 <code>*</code>。</li>
+            <li>运行 <code>git switch -c feature</code>，新建并切换过去。</li>
+            <li>写一个改动并提交（<code>git add</code> → <code>git commit -m "feat: add banner"</code>）。</li>
+            <li>运行 <code>git switch main</code>，发现 main 里看不到刚才的提交。</li>
+            <li>运行 <code>git merge feature</code>，观察改动被接回来。</li>
+            <li>运行 <code>git branch -d feature</code>，把临时分支清理掉。</li>
+          </ul>
+        </div>
+        <aside class="tip-box">
+          <h3>记忆口诀</h3>
+          <p>branch 看全局，switch 去干活；先回目标再 merge；合完顺手 -d。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="index.html">返回首页</a> · 练熟分支之后，再学参与协作会轻松很多。</p>
+  </footer>
+</body>
+</html>

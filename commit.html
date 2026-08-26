@@ -14,12 +14,14 @@
         <a href="index.html#roadmap">学习路线</a>
         <a href="repository.html">理解仓库专题</a>
         <a href="commit.html" aria-current="page">掌握提交专题</a>
+        <a href="branch.html">练习分支专题</a>
+        <a href="collaboration.html">参与协作专题</a>
       </div>
     </nav>
     <div class="sub-hero-content">
       <p class="eyebrow">新增页面</p>
       <h1>掌握提交专题</h1>
-      <p class="hero-text">把“保存代码”升级成“留下清晰历史”：用多张图和小练习学会 status、diff、add、commit。</p>
+      <p class="hero-text">把“保存代码”升级成“留下清晰历史”：用多张图和循序渐进的小练习，学会 status、diff、add、commit 这四件事。</p>
     </div>
   </header>
 
@@ -30,44 +32,93 @@
       <div class="wide-diagram">
         <img src="assets/git-commit-flow.svg" alt="Git 提交流程从查看状态、比较差异、暂存变更到创建提交" />
       </div>
-      <p class="large-note">掌握提交的关键是“四步确认”：看状态、看差异、选内容、写说明。你不需要一次学会所有命令，只要先把这条主线练熟。</p>
+      <p class="large-note">掌握提交的关键是“四步确认”：看状态、看差异、选内容、写说明。别急着背命令——先顺着下面每一张图，把每一步“为什么要做”看懂，命令自然会记住。</p>
     </section>
 
     <section class="section" aria-labelledby="commit-steps-title">
-      <p class="section-tag">四步上手</p>
-      <h2 id="commit-steps-title">跟着这四步做，每次提交都会更稳</h2>
+      <p class="section-tag">页面地图</p>
+      <h2 id="commit-steps-title">这一页怎么带你把提交练熟</h2>
       <div class="lesson-grid">
         <article>
           <span class="step-number">01</span>
           <h3>看状态：我改了什么？</h3>
-          <p>运行 <code>git status</code>，先确认哪些文件被修改、哪些文件还未跟踪、哪些文件已经暂存。</p>
+          <p><code>git status</code> 把文件归成三类。你只需要先看懂这张清单。</p>
         </article>
         <article>
           <span class="step-number">02</span>
           <h3>看差异：改动对吗？</h3>
-          <p>运行 <code>git diff</code> 检查工作区差异；暂存后再用 <code>git diff --staged</code> 检查即将提交的内容。</p>
+          <p><code>git diff</code> 与 <code>git diff --staged</code> 帮你核对每个改动细节。</p>
         </article>
         <article>
           <span class="step-number">03</span>
           <h3>选内容：只提交相关修改</h3>
-          <p>用 <code>git add 文件名</code> 精准暂存；如果一个文件里有多处无关修改，可以用 <code>git add -p</code> 分块选择。</p>
+          <p>用 <code>git add</code> 精准暂存，一提交只讲清楚一件事。</p>
         </article>
         <article>
           <span class="step-number">04</span>
           <h3>写说明：让未来的你看懂</h3>
-          <p>提交信息写“这次做了什么”，例如 <code>docs: add commit practice guide</code>，不要只写 update。</p>
+          <p>提交信息用“类型 + 冒号 + 说明”，别人扫一眼就明白。</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="status-title">
+      <p class="section-tag">第 1 步 · 看状态</p>
+      <h2 id="status-title">git status 只关心三类状态</h2>
+      <div class="story-row">
+        <img src="assets/git-status-trio.svg" alt="未跟踪、未暂存、已暂存三类文件状态和下一步命令" />
+        <div>
+          <h3>用它回答“我的文件现在在哪一步？”</h3>
+          <p>新文件显示为<strong>未跟踪</strong>，改动过的老文件显示为<strong>未暂存</strong>，被你 <code>git add</code> 选中的显示为<strong>已暂存</strong>。</p>
+          <p>status 不仅告诉你状态，还会直接提示下一步命令，跟着它走就不会慌。</p>
+          <figure class="commit-checklist">
+            <h4>现在你只需要记一句</h4>
+            <ul>
+              <li>先运行 <code>git status</code>，看有没有“未暂存”和“未跟踪”。</li>
+              <li>有的话，说明还有改动没被纳入下一次提交。</li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="diff-title">
+      <p class="section-tag">第 2 步 · 看差异</p>
+      <h2 id="diff-title">git diff 到底在比较什么？</h2>
+      <div class="story-row reverse">
+        <img src="assets/git-diff-targets.svg" alt="git diff 比较工作区和暂存区，diff --staged 比较暂存区和上次提交" />
+        <div>
+          <h3>先确认“改动对吗”，再决定要不要提交</h3>
+          <p><code>git diff</code> 对比的是<strong>工作区和暂存区</strong>——你能看到有哪些改动还躺在工作区里没被选中。</p>
+          <p><code>git diff --staged</code> 对比的是<strong>暂存区和最近那次提交（HEAD）</strong>——你即将提交的内容，和上次保存好的版本差多少。</p>
+          <p>一个帮你“查漏”，一个帮你“把关”，提交前各跑一遍最稳妥。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="select-title">
+      <p class="section-tag">第 3 步 · 选内容</p>
+      <h2 id="select-title">add 之后，同一个文件会有好几份版本</h2>
+      <div class="story-row">
+        <img src="assets/git-add-versions.svg" alt="同一个文件在工作区、暂存区和 HEAD 里可能是不同内容" />
+        <div>
+          <h3>add 只是把你选定的一版送进“候选清单”</h3>
+          <p>你可能在文件里同时改了标题、样式，还加了一行注释。用 <code>git add 文件名</code> 一次全部暂存，下次想拆开就难了。</p>
+          <p>想只提交一部分，就用 <code>git add -p</code>，它会把改动切成小块，问你要不要选中每一块。</p>
+          <p><strong>原则：一次提交只讲清楚一件事</strong>。修复 bug、加功能、改文档，分开提交才容易回退和审查。</p>
+        </div>
       </div>
     </section>
 
     <section class="section image-story" aria-labelledby="anatomy-title">
       <p class="section-tag">图解 commit</p>
       <h2 id="anatomy-title">commit 里面到底有什么？</h2>
-      <div class="story-row">
+      <div class="story-row reverse">
         <img src="assets/git-commit-anatomy.svg" alt="Git 提交结构包含提交编号、作者时间、提交信息和文件快照" />
         <div>
           <h3>把 commit 当成“带说明的快照”</h3>
-          <p>每个 commit 都有唯一编号、作者、时间、提交信息和文件快照。Git 正是靠这些快照，把项目历史串成可追踪的时间线。</p>
+          <p>每个 commit 都有唯一编号（<strong>Commit ID</strong>）、作者和时间、提交信息，以及一份完整的<strong>文件快照</strong>。</p>
+          <p>Git 正是靠这些快照，把项目历史串成一条可追踪的时间线。所以提交比“保存”多了一层含义：它是一段可以被翻出来、被回退、被讨论的记录。</p>
         </div>
       </div>
     </section>
@@ -75,18 +126,22 @@
     <section class="section image-story" aria-labelledby="history-title">
       <p class="section-tag">为什么要小步提交</p>
       <h2 id="history-title">好的历史来自很多小而清楚的提交</h2>
-      <div class="story-row reverse">
+      <div class="story-row">
         <img src="assets/git-commit-history.svg" alt="多个小步 Git 提交串联成清晰项目历史" />
         <div>
           <h3>小步提交更容易回退和审查</h3>
-          <p>如果一个提交里同时改样式、修 bug、加功能，排查问题时会很痛苦。把不同目的拆成多个提交，团队成员更容易读懂你的思路。</p>
+          <p>如果一个提交里同时改样式、修 bug、加功能，几天后再排查问题会非常痛苦。</p>
+          <p>把不同目的拆成多个小提交，团队里其他人能顺着你的思路，一眼看出每一步做了什么、为什么这样做。</p>
         </div>
       </div>
     </section>
 
     <section class="section commands" aria-labelledby="message-title">
-      <p class="section-tag">提交信息模板</p>
+      <p class="section-tag">第 4 步 · 写说明</p>
       <h2 id="message-title">写出别人愿意读的提交信息</h2>
+      <div class="wide-diagram">
+        <img src="assets/git-commit-message.svg" alt="提交信息模板：类型冒号说明，以及常见类型列表" />
+      </div>
       <div class="message-examples">
         <article>
           <h3>推荐格式</h3>
@@ -104,6 +159,20 @@
       </div>
     </section>
 
+    <section class="section image-story" aria-labelledby="amend-title">
+      <p class="section-tag">提交之后 · 补救</p>
+      <h2 id="amend-title">写错说明或漏改一处？用 amend 原地补救</h2>
+      <div class="story-row">
+        <img src="assets/git-amend.svg" alt="git commit --amend 把修正合并进最近一次提交，而不是变得空提交" />
+        <div>
+          <h3>让修正并进最近这次提交，而不是堆一个“补丁”</h3>
+          <p>提交完马上发现：<strong>说明写错了</strong>，或者<strong>少存了一个文件</strong>。这时先 <code>git add</code> 补上的改动，再运行 <code>git commit --amend</code>。</p>
+          <p>它会改写<strong>最近一次提交</strong>（编号会变化），历史里不会多出一个毫无意义的“补充修复”节点。</p>
+          <p class="large-note"><strong>注意：</strong>amend 只适合还没推送（push）到远程的提交。已经推给别人的提交，不要再改写。</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section practice" aria-labelledby="practice-title">
       <p class="section-tag">动手练习</p>
       <h2 id="practice-title">10 分钟练会一次完整提交</h2>
@@ -115,12 +184,13 @@
             <li>运行 <code>git status</code>，确认文件处于未跟踪状态。</li>
             <li>运行 <code>git add notes.md</code>，再运行 <code>git diff --staged</code> 检查暂存内容。</li>
             <li>运行 <code>git commit -m "docs: add git learning notes"</code> 创建提交。</li>
-            <li>运行 <code>git log --oneline -3</code>，确认历史中出现这次提交。</li>
+            <li>再改一个词，运行 <code>git add notes.md</code> 后 <code>git commit --amend</code>，观察它并进了同一笔提交。</li>
+            <li>运行 <code>git log --oneline -3</code>，确认历史干净清晰。</li>
           </ul>
         </div>
         <aside class="tip-box">
           <h3>记忆口诀</h3>
-          <p>先 status 看全局，再 diff 看细节；add 是选择，commit 是定稿。</p>
+          <p>先 status 看全局，再 diff 看细节；add 是选择，commit 是定稿，慢了就 amend。</p>
         </aside>
       </div>
     </section>

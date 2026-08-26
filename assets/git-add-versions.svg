@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git add 之后同一个文件的两份版本</title>
+  <desc id="desc">工作区、暂存区、HEAD 里同一文件名可能是不同内容。</desc>
+  <rect width="900" height="360" rx="28" fill="#1f2933" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="800" fill="#fffaf2">同一个文件，在不同区域可能是不同版本</text>
+
+    <rect x="50" y="92" width="246" height="200" rx="20" fill="#ffe3d7" />
+    <text x="173" y="122" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">工作区（现编辑）</text>
+    <rect x="70" y="136" width="206" height="132" rx="14" fill="#ffffff" />
+    <text x="173" y="162" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2933">file.txt</text>
+    <text x="173" y="194" text-anchor="middle" font-size="14" fill="#5f6c7b">改标题 + 已保存</text>
+    <text x="173" y="220" text-anchor="middle" font-size="14" fill="#5f6c7b">变样式 + 已保存</text>
+    <text x="173" y="246" text-anchor="middle" font-size="14" font-weight="700" fill="#bd3d2b">加注释（还没 add）</text>
+
+    <rect x="327" y="92" width="246" height="200" rx="20" fill="#eef8f4" />
+    <text x="450" y="122" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">暂存区（已选中）</text>
+    <rect x="347" y="136" width="206" height="132" rx="14" fill="#ffffff" />
+    <text x="450" y="162" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2933">file.txt</text>
+    <text x="450" y="194" text-anchor="middle" font-size="14" fill="#5f6c7b">改标题 + 已保存</text>
+    <text x="450" y="220" text-anchor="middle" font-size="14" fill="#5f6c7b">变样式 + 已保存</text>
+
+    <rect x="604" y="92" width="246" height="200" rx="20" fill="#edf2ff" />
+    <text x="727" y="122" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">HEAD（上次提交）</text>
+    <rect x="624" y="136" width="206" height="132" rx="14" fill="#ffffff" />
+    <text x="727" y="162" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2933">file.txt</text>
+    <text x="727" y="194" text-anchor="middle" font-size="14" fill="#5f6c7b">旧版内容</text>
+    <text x="727" y="220" text-anchor="middle" font-size="14" fill="#5f6c7b">（没有标题改动）</text>
+
+    <text x="450" y="320" text-anchor="middle" font-size="17" font-weight="700" fill="#cbd5e1">add 只是把你选定的一版放进“候选清单”，commit 才真正定稿。</text>
+  </g>
+</svg>

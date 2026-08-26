@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git pull 拉取远程更新</title>
+  <desc id="desc">git pull 等于先 git fetch 拿到远程更新，再 git merge 合并进当前分支。</desc>
+  <rect width="900" height="360" rx="28" fill="#1f2933" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#fffaf2">git pull：把别人的更新合进你的本地</text>
+    <text x="450" y="78" text-anchor="middle" font-size="16" fill="#cbd5e1">pull 一次 = 先 fetch（拿更新）再 merge（合进来）</text>
+
+    <rect x="80" y="118" width="320" height="150" rx="20" fill="#edf2ff" />
+    <text x="240" y="148" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">远程仓库</text>
+    <g stroke="#5570d9" stroke-width="5" stroke-linecap="round">
+      <path d="M150 205 H330" />
+    </g>
+    <g fill="#edf2ff" stroke="#5570d9" stroke-width="4">
+      <circle cx="180" cy="205" r="15" />
+      <circle cx="240" cy="205" r="15" />
+      <circle cx="300" cy="205" r="18" />
+      <text x="300" y="210" text-anchor="middle" font-size="13" font-weight="800" fill="#1f2933">D</text>
+    </g>
+    <text x="240" y="252" text-anchor="middle" font-size="14" fill="#5f6c7b">同事 push 了新的提交 D</text>
+
+    <g stroke="#2f9e7e" stroke-width="6" stroke-linecap="round">
+      <line x1="280" y1="118" x2="470" y2="300" marker-end="url(#aP2)" />
+    </g>
+    <text x="500" y="196" text-anchor="middle" font-size="17" font-weight="800" fill="#fff3c4">git pull</text>
+
+    <rect x="500" y="250" width="320" height="80" rx="20" fill="#eef8f4" />
+    <text x="660" y="278" text-anchor="middle" font-size="17" font-weight="800" fill="#1f2933">你的本地仓库</text>
+    <text x="660" y="306" text-anchor="middle" font-size="14" fill="#5f6c7b">拿到 D 并合并进当前分支</text>
+
+    <rect x="560" y="118" width="240" height="60" rx="16" fill="#fff3c4" />
+    <text x="680" y="148" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">git pull</text>
+    <text x="680" y="168" text-anchor="middle" font-size="13" fill="#5f6c7b">≈ git fetch + git merge</text>
+
+    <defs>
+      <marker id="aP2" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#2f9e7e" />
+      </marker>
+    </defs>
+  </g>
+</svg>

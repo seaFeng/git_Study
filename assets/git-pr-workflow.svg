@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">团队协作标准流程 Pull Request</title>
+  <desc id="desc">从同步代码、开分支开发、提交推送，到发起 Pull Request 待队友审查合并。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">真实团队：Pull Request（PR）流程</text>
+
+    <g font-size="14">
+      <rect x="45" y="120" width="142" height="150" rx="16" fill="#fff" stroke="#e4e7ec" stroke-width="2" />
+      <circle cx="116" cy="156" r="20" fill="#eef8f4" />
+      <text x="116" y="162" text-anchor="middle" font-size="15" font-weight="800" fill="#2f9e7e">1</text>
+      <text x="116" y="200" text-anchor="middle" font-weight="800" fill="#1f2933">同步最新</text>
+      <text x="116" y="222" text-anchor="middle" fill="#5f6c7b">pull 一下</text>
+      <text x="116" y="244" text-anchor="middle" fill="#5f6c7b">再建分支</text>
+
+      <rect x="211" y="120" width="142" height="150" rx="16" fill="#fff" stroke="#e4e7ec" stroke-width="2" />
+      <circle cx="282" cy="156" r="20" fill="#edf2ff" />
+      <text x="282" y="162" text-anchor="middle" font-size="15" font-weight="800" fill="#5570d9">2</text>
+      <text x="282" y="200" text-anchor="middle" font-weight="800" fill="#1f2933">开分支开发</text>
+      <text x="282" y="222" text-anchor="middle" fill="#5f6c7b">switch -c</text>
+      <text x="282" y="244" text-anchor="middle" fill="#5f6c7b">小步提交</text>
+
+      <rect x="377" y="120" width="142" height="150" rx="16" fill="#fff" stroke="#e4e7ec" stroke-width="2" />
+      <circle cx="448" cy="156" r="20" fill="#eef8f4" />
+      <text x="448" y="162" text-anchor="middle" font-size="15" font-weight="800" fill="#2f9e7e">3</text>
+      <text x="448" y="200" text-anchor="middle" font-weight="800" fill="#1f2933">推送分支</text>
+      <text x="448" y="222" text-anchor="middle" fill="#5f6c7b">push 到远程</text>
+      <text x="448" y="244" text-anchor="middle" fill="#5f6c7b">开 PR</text>
+
+      <rect x="543" y="120" width="142" height="150" rx="16" fill="#fff" stroke="#e4e7ec" stroke-width="2" />
+      <circle cx="614" cy="156" r="20" fill="#fff3c4" />
+      <text x="614" y="162" text-anchor="middle" font-size="15" font-weight="800" fill="#b98a00">4</text>
+      <text x="614" y="200" text-anchor="middle" font-weight="800" fill="#1f2933">队友审查</text>
+      <text x="614" y="222" text-anchor="middle" fill="#5f6c7b">讨论 / 修改</text>
+      <text x="614" y="244" text-anchor="middle" fill="#5f6c7b">再提交</text>
+
+      <rect x="709" y="120" width="146" height="150" rx="16" fill="#fff" stroke="#e4e7ec" stroke-width="2" />
+      <circle cx="782" cy="156" r="20" fill="#ffe3d7" />
+      <text x="782" y="162" text-anchor="middle" font-size="15" font-weight="800" fill="#bd3d2b">5</text>
+      <text x="782" y="200" text-anchor="middle" font-weight="800" fill="#1f2933">通过合并</text>
+      <text x="782" y="222" text-anchor="middle" fill="#5f6c7b">合并进主线</text>
+      <text x="782" y="244" text-anchor="middle" fill="#5f6c7b">删除分支</text>
+
+      <g stroke="#c8cdd6" stroke-width="3" stroke-linecap="round">
+        <line x1="190" y1="180" x2="207" y2="180" />
+        <line x1="356" y1="180" x2="373" y2="180" />
+        <line x1="522" y1="180" x2="539" y2="180" />
+        <line x1="688" y1="180" x2="705" y2="180" />
+      </g>
+    </g>
+
+    <rect x="220" y="300" width="460" height="42" rx="14" fill="#eef8f4" />
+    <text x="450" y="325" text-anchor="middle" font-size="15" font-weight="800" fill="#2f9e7e">主干始终保持可发布，你的改动先隔离在分支上</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">合并后删除分支</title>
+  <desc id="desc">功能合并完成用 git branch -d 删除临时分支，保持列表干净。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">功能合完后，记得删掉临时分支</text>
+
+    <rect x="70" y="110" width="320" height="170" rx="20" fill="#edf2ff" />
+    <text x="230" y="142" text-anchor="middle" font-size="16" font-weight="800" fill="#1f2933">合并前分支列表</text>
+    <text x="100" y="182" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">* main</text>
+    <text x="230" y="182" font-size="13" fill="#5f6c7b">当前分支</text>
+    <text x="100" y="216" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">  feature</text>
+    <text x="240" y="216" font-size="13" fill="#2f9e7e">已合并，可以删</text>
+    <text x="100" y="250" font-family="SFMono-Regular,Consolas,monospace" font-size="16" fill="#5f6c7b">  old-try</text>
+    <text x="230" y="250" font-size="13" fill="#bd3d2b">未合并也要清</text>
+
+    <g stroke="#bd3d2b" stroke-width="5" stroke-linecap="round">
+      <line x1="420" y1="195" x2="500" y2="195" />
+    </g>
+    <path d="M496 187 L510 195 L496 203 Z" fill="#bd3d2b" />
+    <text x="465" y="176" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#bd3d2b">git branch -d</text>
+
+    <rect x="540" y="110" width="300" height="170" rx="20" fill="#eef8f4" />
+    <text x="690" y="142" text-anchor="middle" font-size="16" font-weight="800" fill="#1f2933">删除后</text>
+    <text x="570" y="182" font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="800" fill="#1f2933">* main</text>
+    <text x="700" y="182" font-size="13" fill="#5f6c7b">列表清爽多了</text>
+    <text x="570" y="240" font-size="14" fill="#5f6c7b">历史依然完整，提交没丢</text>
+
+    <text x="450" y="330" text-anchor="middle" font-size="16" font-weight="700" fill="#5f6c7b">-d 只删已合并的分支；尚未合并却想强删用 -D，一般用不到。</text>
+  </g>
+</svg>

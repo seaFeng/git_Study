@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">本地与远程仓库的协作关系</title>
+  <desc id="desc">你的本地仓库和远程仓库通过 push、pull 双向同步，同事共享同一份远程。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">提交到本地只是第一步，协作靠「远程仓库」</text>
+    <text x="450" y="76" text-anchor="middle" font-size="16" fill="#5f6c7b">远程仓库放在云端，所有成员共用这一份，用 push / pull 保持同步</text>
+
+    <rect x="250" y="120" width="400" height="120" rx="22" fill="#edf2ff" />
+    <text x="450" y="162" text-anchor="middle" font-size="19" font-weight="800" fill="#1f2933">远程仓库 origin</text>
+    <text x="450" y="190" text-anchor="middle" font-size="15" fill="#5f6c7b">云端共享，团队每个人的中转站</text>
+    <text x="450" y="216" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="14" fill="#1f2933">(GitHub / GitLab / Gitee …)</text>
+
+    <rect x="70" y="278" width="250" height="58" rx="16" fill="#eef8f4" />
+    <text x="195" y="300" text-anchor="middle" font-size="16" font-weight="800" fill="#1f2933">你的本地仓库</text>
+    <text x="195" y="322" text-anchor="middle" font-size="13" fill="#5f6c7b">只有你能直接看到</text>
+
+    <rect x="580" y="278" width="250" height="58" rx="16" fill="#ffe3d7" />
+    <text x="705" y="300" text-anchor="middle" font-size="16" font-weight="800" fill="#1f2933">同事的本地仓库</text>
+    <text x="705" y="322" text-anchor="middle" font-size="13" fill="#5f6c7b">他的副本，互不干扰</text>
+
+    <g stroke="#bd3d2b" stroke-width="4" stroke-linecap="round">
+      <line x1="210" y1="272" x2="210" y2="243" marker-end="url(#aU)" />
+    </g>
+    <text x="210" y="236" text-anchor="middle" font-size="14" font-weight="800" fill="#bd3d2b">push</text>
+    <g stroke="#2f9e7e" stroke-width="4" stroke-linecap="round">
+      <line x1="250" y1="242" x2="250" y2="272" marker-end="url(#aD)" />
+    </g>
+    <text x="252" y="262" text-anchor="middle" font-size="14" font-weight="800" fill="#2f9e7e">pull</text>
+
+    <g stroke="#bd3d2b" stroke-width="4" stroke-linecap="round">
+      <line x1="640" y1="272" x2="640" y2="243" marker-end="url(#aU)" />
+    </g>
+    <text x="640" y="236" text-anchor="middle" font-size="14" font-weight="800" fill="#bd3d2b">push</text>
+    <g stroke="#2f9e7e" stroke-width="4" stroke-linecap="round">
+      <line x1="690" y1="242" x2="690" y2="272" marker-end="url(#aD)" />
+    </g>
+    <text x="692" y="262" text-anchor="middle" font-size="14" font-weight="800" fill="#2f9e7e">pull</text>
+
+    <defs>
+      <marker id="aU" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,3 L6,0 L6,6 Z" fill="#bd3d2b" />
+      </marker>
+      <marker id="aD" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#2f9e7e" />
+      </marker>
+    </defs>
+  </g>
+</svg>

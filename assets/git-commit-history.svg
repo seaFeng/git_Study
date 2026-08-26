@@ -3,7 +3,7 @@
   <desc id="desc">小步提交如何形成清晰的项目历史。</desc>
   <rect width="900" height="360" rx="28" fill="#fffaf2" />
   <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">小步提交会形成清晰历史</text>
+    <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">小步提交会形成清晰历史</text>
     <line x1="130" y1="170" x2="770" y2="170" stroke="#f06449" stroke-width="6" stroke-linecap="round" />
     <g>
       <circle cx="150" cy="170" r="34" fill="#ffe3d7" stroke="#bd3d2b" stroke-width="4" />

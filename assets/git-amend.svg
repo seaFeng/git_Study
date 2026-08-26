@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git commit --amend 补救最新提交</title>
+  <desc id="desc">用 amend 把修正合并进最近一次提交，而不是新增空白提交。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">写错说明或漏改一处？amend 原地补救</text>
+
+    <text x="450" y="98" text-anchor="middle" font-size="17" font-weight="800" fill="#bd3d2b">如果不加处理（会多一笔“补丁”提交）</text>
+    <circle cx="205" cy="160" r="38" fill="#ffe3d7" stroke="#bd3d2b" stroke-width="4" />
+    <text x="205" y="156" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">A</text>
+    <text x="205" y="178" text-anchor="middle" font-size="12" fill="#5f6c7b">写错说明</text>
+    <line x1="255" y1="160" x2="315" y2="160" stroke="#5f6c7b" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowB)" />
+    <text x="285" y="142" text-anchor="middle" font-size="14" fill="#5f6c7b">补丁</text>
+    <circle cx="360" cy="160" r="38" fill="#edf2ff" stroke="#5570d9" stroke-width="4" />
+    <text x="360" y="156" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">B</text>
+    <text x="360" y="178" text-anchor="middle" font-size="12" fill="#5f6c7b">补充修复</text>
+    <text x="470" y="178" text-anchor="middle" font-size="15" fill="#5f6c7b">← history 多了无意义的提交</text>
+
+    <line x1="60" y1="230" x2="840" y2="230" stroke="#bd3d2b" stroke-width="2" stroke-dasharray="6 6" />
+
+    <text x="450" y="262" text-anchor="middle" font-size="17" font-weight="800" fill="#2f9e7e">用 git commit --amend（覆盖最近一次，不新增节点）</text>
+    <circle cx="205" cy="312" r="38" fill="#ffe3d7" stroke="#bd3d2b" stroke-width="4" />
+    <text x="205" y="308" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">A</text>
+    <text x="205" y="330" text-anchor="middle" font-size="12" fill="#5f6c7b">写错说明</text>
+    <line x1="255" y1="312" x2="315" y2="312" stroke="#2f9e7e" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowG)" />
+    <text x="285" y="294" text-anchor="middle" font-size="14" font-weight="800" fill="#2f9e7e">--amend</text>
+    <circle cx="360" cy="312" r="38" fill="#eef8f4" stroke="#2f9e7e" stroke-width="4" />
+    <text x="360" y="308" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">A′</text>
+    <text x="360" y="330" text-anchor="middle" font-size="12" fill="#5f6c7b">已改写说明</text>
+    <text x="470" y="330" text-anchor="middle" font-size="15" fill="#5f6c7b">← 仍是同一个提交，编号会变</text>
+
+    <defs>
+      <marker id="arrowB" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#5f6c7b" />
+      </marker>
+      <marker id="arrowG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#2f9e7e" />
+      </marker>
+    </defs>
+  </g>
+</svg>

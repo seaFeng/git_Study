@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>参与协作专题 - Git 学习站</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="logo" href="index.html">Git 学习站</a>
+      <div class="nav-links">
+        <a href="index.html#roadmap">学习路线</a>
+        <a href="repository.html">理解仓库专题</a>
+        <a href="commit.html">掌握提交专题</a>
+        <a href="branch.html">练习分支专题</a>
+        <a href="collaboration.html" aria-current="page">参与协作专题</a>
+      </div>
+    </nav>
+    <div class="sub-hero-content">
+      <p class="eyebrow">学习路线 · 第 4 步</p>
+      <h1>参与协作专题</h1>
+      <p class="hero-text">你一个人用 Git 是存档，一群人用 Git 才是协作。用多张图和循序渐进的小练习，学会 clone、push、pull 和 Pull Request 这套团队流程。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section commands" aria-labelledby="collab-map-title">
+      <p class="section-tag">先建立概念</p>
+      <h2 id="collab-map-title">协作的起点：你的仓库，和团队共用的远程仓库</h2>
+      <div class="wide-diagram">
+        <img src="assets/git-remote-basics.svg" alt="你的本地仓库和远程仓库通过 push、pull 双向同步，同事共享同一份远程" />
+      </div>
+      <p class="large-note">当你提交到本地，别人还看不到。想让别人看到，就得把本地提交<strong>推送（push）</strong>到远程；想看别人的，就又<strong>拉取（pull）</strong>回来。这一页按“第一次进来 → 推送 → 拉取 → 团队流程”的顺序带你走通全程。</p>
+    </section>
+
+    <section class="section" aria-labelledby="collab-steps-title">
+      <p class="section-tag">页面地图</p>
+      <h2 id="collab-steps-title">这一页怎么带你把协作跑熟</h2>
+      <div class="lesson-grid">
+        <article>
+          <span class="step-number">01</span>
+          <h3>第一次进来：clone</h3>
+          <p><code>git clone</code> 把远程的代码和历史完整复制到你的电脑，并记住远程叫 origin。</p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <h3>把成果送出去：push</h3>
+          <p><code>git push</code> 把本地新提交推送到远程，队友才能看到你的成果。</p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <h3>把更新收进来：pull</h3>
+          <p><code>git pull</code> 把别人的新提交拿到本地并合并，大家始终同步。</p>
+        </article>
+        <article>
+          <span class="step-number">04</span>
+          <h3>团队标准：Pull Request</h3>
+          <p>先分支、后推送、再请求合并，主干始终保持可发布，改动先隔离在分支上。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="clone-title">
+      <p class="section-tag">第 1 步 · 第一次进来</p>
+      <h2 id="clone-title">git clone：一键把整个远程仓库搬回家</h2>
+      <div class="story-row">
+        <img src="assets/git-clone.svg" alt="git clone 把远程仓库的代码和历史完整复制到本地" />
+        <div>
+          <h3>不用手动建仓库、设远程，一条命令全搞定</h3>
+          <p>拿到项目地址后运行 <code>git clone 仓库地址</code>，Git 会复制<strong>全部代码 + 完整提交历史</strong>，并自动把远程记住为 <strong>origin</strong>。</p>
+          <p>这意味着你马上拥有和团队一致的完整副本，可以直接开始开发，不需要再手动配置远程。</p>
+          <figure class="commit-checklist">
+            <h4>现在你只需要记一句</h4>
+            <ul>
+              <li>首次参与项目：<code>git clone 地址</code>，之后就进入了熟悉的世界。</li>
+              <li>仓库名 <strong>origin</strong> 是约定，别人问你“推到哪里”就是推到 origin。</li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="push-title">
+      <p class="section-tag">第 2 步 · 把成果送出去</p>
+      <h2 id="push-title">git push：提交到本地，只是成功的一半</h2>
+      <div class="story-row reverse">
+        <img src="assets/git-push.svg" alt="本地新提交通过 git push 送到远程，同事 pull 才能看到" />
+        <div>
+          <h3>push 之前，你的成果只有你自己看得见</h3>
+          <p>你在本地 commit 了，但远程还是旧的。运行 <code>git push</code>，本地新提交才会被送上云端。</p>
+          <p>推完之后，想告诉队友“可以看了”，一句话就够了：<strong>“我推送了，拉一下。”</strong></p>
+          <p><strong>提醒：</strong>commit 在本地，改起来很自由；push 之后历史要谨慎改写（见前面的 amend 说明），推出去的东西要负责任。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section image-story" aria-labelledby="pull-title">
+      <p class="section-tag">第 3 步 · 把更新收进来</p>
+      <h2 id="pull-title">git pull：一条命令同步大家的进展</h2>
+      <div class="story-row">
+        <img src="assets/git-pull.svg" alt="git pull 等于先 fetch 拿到远程更新，再 merge 合并进当前分支" />
+        <div>
+          <h3>开发前先 pull，能少踩很多坑</h3>
+          <p>队友可能早已 push 了新提交。<code>git pull</code> 会先 <code>git fetch</code>（把远程更新下载下来），再 <code>git merge</code>（合进你当前分支）。</p>
+          <p>开头养成习惯：<strong>每次开始写代码前先 pull 一下</strong>，避免在你已经落后的旧代码上继续改，这也是减少冲突最有效的一招。</p>
+          <p>如果两边恰好改了同一个文件的同一处，Git 会停下让你解决冲突——别慌，按分支专题里讲的方法处理即可。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section commands" aria-labelledby="pr-title">
+      <p class="section-tag">第 4 步 · 团队标准</p>
+      <h2 id="pr-title">Pull Request：改动先在分支上隔离，审查通过再合进主干</h2>
+      <div class="wide-diagram">
+        <img src="assets/git-pr-workflow.svg" alt="git clone 同步、开分支开发、推送分支、队友审查、通过合并的完整流程" />
+      </div>
+      <div class="message-examples">
+        <article>
+          <h3>为什么主干要“干净”</h3>
+          <p>主干（main）始终保留可发布的版本。所有新改动先在分支上做，确认没问观才合回来。</p>
+        </article>
+        <article>
+          <h3>我的流程清单</h3>
+          <p><code>git pull</code> 同步 → <code>git switch -c 分支</code> → 提交 → <code>git push</code> → 在平台上开 PR → 等审查合并。</p>
+        </article>
+        <article>
+          <h3>PR 的意义</h3>
+          <p>PR 是“请队友看一下我的改动”。它把代码审查、讨论和合并放在一处，保证质量也方便追责。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section practice" aria-labelledby="practice-title">
+      <p class="section-tag">动手练习</p>
+      <h2 id="practice-title">15 分钟模拟一次团队协作</h2>
+      <div class="practice-panel">
+        <div>
+          <h3>练习任务</h3>
+          <ul>
+            <li>把任意已有仓库推到远程，或用一份 <code>git clone</code> 的地址复制一份到新文件夹。</li>
+            <li>改动一个文件并 <code>git commit</code>，运行 <code>git push</code> 推送到远程。</li>
+            <li>换到另一份克隆里，运行 <code>git pull</code>，观察它拿到你的新提交。</li>
+            <li>两个副本各自修改同一处并先后 push，体验 pull 时的冲突处理。</li>
+            <li>在平台上开一个分支并提交 Pull Request，走一遍审查、合并、删除分支。</li>
+          </ul>
+        </div>
+        <aside class="tip-box">
+          <h3>记忆口诀</h3>
+          <p>先 clone 进门，通了就 push 出成果，开工前 pull 收更新；主干保持干净，改动走分支加 PR。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="index.html">返回首页</a> · 到这里，你已经能把 Git 用于真实的团队协作。</p>
+  </footer>
+</body>
+</html>

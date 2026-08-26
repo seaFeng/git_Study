@@ -8,7 +8,7 @@
   </defs>
   <rect width="900" height="360" rx="28" fill="#fffaf2" />
   <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1f2933">理解仓库：Git 的四个区域</text>
+    <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">理解仓库：Git 的四个区域</text>
     <g transform="translate(52 98)">
       <rect width="170" height="150" rx="22" fill="#ffe3d7" stroke="#f06449" stroke-width="3" />
       <text x="85" y="58" text-anchor="middle" font-size="24" font-weight="800" fill="#1f2933">工作区</text>

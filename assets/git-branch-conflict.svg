@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">合并冲突与解决</title>
+  <desc id="desc">两边改了同一处时出现冲突，手动选择保留后再次提交。</desc>
+  <rect width="900" height="360" rx="28" fill="#1f2933" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#fffaf2">冲突不是错误，只是 Git 不知道该留哪边</text>
+    <text x="450" y="78" text-anchor="middle" font-size="16" fill="#cbd5e1">只在两边改到“同一处”时才会出现，需要你来拍板</text>
+
+    <rect x="55" y="120" width="250" height="84" rx="18" fill="#eef8f4" />
+    <text x="180" y="148" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">main 这边写着</text>
+    <text x="180" y="180" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="15" fill="#1f2933">首页标题：欢迎</text>
+
+    <rect x="55" y="232" width="250" height="84" rx="18" fill="#ffe3d7" />
+    <text x="180" y="260" text-anchor="middle" font-size="15" font-weight="800" fill="#1f2933">feature 这边写着</text>
+    <text x="180" y="292" text-anchor="middle" font-family="SFMono-Regular,Consolas,monospace" font-size="15" fill="#1f2933">首页标题：欢迎光临</text>
+
+    <rect x="360" y="120" width="250" height="196" rx="18" fill="#fffaf2" />
+    <text x="485" y="150" text-anchor="middle" font-size="15" font-weight="800" fill="#bd3d2b">冲突标记出现在文件里</text>
+    <text x="382" y="188" font-family="SFMono-Regular,Consolas,monospace" font-size="14" font-weight="700" fill="#bd3d2b">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+    <text x="382" y="216" font-family="SFMono-Regular,Consolas,monospace" font-size="14" fill="#1f2933">欢迎</text>
+    <text x="382" y="244" font-family="SFMono-Regular,Consolas,monospace" font-size="14" font-weight="700" fill="#bd3d2b">=======</text>
+    <text x="382" y="272" font-family="SFMono-Regular,Consolas,monospace" font-size="14" fill="#1f2933">欢迎光临</text>
+    <text x="382" y="300" font-family="SFMono-Regular,Consolas,monospace" font-size="14" font-weight="700" fill="#bd3d2b">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</text>
+
+    <g text-anchor="middle">
+      <rect x="650" y="120" width="208" height="58" rx="16" fill="#edf2ff" />
+      <text x="754" y="146" font-size="15" font-weight="800" fill="#1f2933">打开文件</text>
+      <text x="754" y="170" font-size="13" fill="#5f6c7b">看冲突标记圈住的范围</text>
+      <rect x="650" y="196" width="208" height="58" rx="16" fill="#fff3c4" />
+      <text x="754" y="222" font-size="15" font-weight="800" fill="#1f2933">选择保留</text>
+      <text x="754" y="246" font-size="13" fill="#5f6c7b">删掉多余的与标记行</text>
+      <rect x="650" y="272" width="208" height="58" rx="16" fill="#eef8f4" />
+      <text x="754" y="298" font-size="15" font-weight="800" fill="#1f2933">git add → git commit</text>
+      <text x="754" y="322" font-size="14" fill="#5f6c7b">提交解决结果</text>
+    </g>
+  </g>
+</svg>

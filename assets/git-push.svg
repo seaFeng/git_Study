@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">git push 推送本地提交到远程</title>
+  <desc id="desc">本地新提交用 git push 送到远程，同事 pull 才能看到。</desc>
+  <rect width="900" height="360" rx="28" fill="#fffaf2" />
+  <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#1f2933">git push：把本地新提交送上云端</text>
+
+    <rect x="60" y="120" width="300" height="190" rx="20" fill="#eef8f4" />
+    <text x="210" y="150" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">你的本地仓库</text>
+    <g stroke="#2f9e7e" stroke-width="5" stroke-linecap="round">
+      <path d="M120 200 H300" />
+    </g>
+    <g fill="#eef8f4" stroke="#2f9e7e" stroke-width="4">
+      <circle cx="150" cy="200" r="16" />
+      <circle cx="210" cy="200" r="16" />
+      <circle cx="270" cy="200" r="18" /> 
+      <text x="270" y="205" text-anchor="middle" font-size="13" font-weight="800" fill="#1f2933">新</text>
+    </g>
+    <text x="210" y="262" text-anchor="middle" font-size="15" fill="#1f2933">多出了本地提交</text>
+    <text x="210" y="290" text-anchor="middle" font-size="14" fill="#5f6c7b">远程目前还没有它</text>
+
+    <g stroke="#f06449" stroke-width="6" stroke-linecap="round">
+      <line x1="390" y1="235" x2="490" y2="135" marker-end="url(#aP)" />
+    </g>
+    <text x="470" y="196" text-anchor="middle" font-size="17" font-weight="800" fill="#bd3d2b">push</text>
+
+    <rect x="540" y="80" width="300" height="170" rx="20" fill="#edf2ff" />
+    <text x="690" y="112" text-anchor="middle" font-size="18" font-weight="800" fill="#1f2933">远程仓库</text>
+    <g stroke="#5570d9" stroke-width="5" stroke-linecap="round">
+      <path d="M600 200 H780" />
+    </g>
+    <g fill="#edf2ff" stroke="#5570d9" stroke-width="4">
+      <circle cx="630" cy="200" r="16" />
+      <circle cx="690" cy="200" r="16" />
+      <circle cx="750" cy="200" r="18" />
+      <text x="750" y="205" text-anchor="middle" font-size="13" font-weight="800" fill="#1f2933">新</text>
+    </g>
+    <text x="690" y="246" text-anchor="middle" font-size="14" fill="#5f6c7b">提交已到远程，同事 pull 可见</text>
+
+    <defs>
+      <marker id="aP" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,3 L6,0 L6,6 Z" fill="#f06449" />
+      </marker>
+    </defs>
+  </g>
+</svg>

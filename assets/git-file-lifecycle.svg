@@ -3,7 +3,7 @@
   <desc id="desc">文件从未跟踪、已修改、已暂存到已提交的状态变化。</desc>
   <rect width="900" height="360" rx="28" fill="#1f2933" />
   <g font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="450" y="50" text-anchor="middle" font-size="28" font-weight="800" fill="#fffaf2">文件状态怎么变化？</text>
+    <text x="450" y="50" text-anchor="middle" font-size="22" font-weight="800" fill="#fffaf2">文件状态怎么变化？</text>
     <g fill="none" stroke="#f06449" stroke-width="5" stroke-linecap="round">
       <path d="M145 180 C245 92 338 92 438 180" />
       <path d="M462 180 C562 268 655 268 755 180" />
